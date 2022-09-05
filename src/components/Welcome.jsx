@@ -1,7 +1,44 @@
-import React from "react";
-import Navbar from "./Navbar";
+import React, { Component } from "react";
+import About from "./About.jsx";
+import Navbar from "./Navbar.jsx";
+import LifeCycle from "./LifeCycle.jsx";
 class Welcome extends Component {
+  constructor(props) {
+    super(props);
+
+    const { date } = this.props;
+    this.state = {
+      date,
+      show: false,
+    };
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(() => {
+      this.tick();
+    }, 1000);
+
+    this.setState({
+      showAbout: false,
+    });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  tick = () => {
+    this.setState({
+      date: new Date(),
+    });
+  };
+
+  //   show = () => {
+  //     this.setState({ showAbout: true });
+  //   };
   render() {
+    // console.log(this.state.date);
+    const { date } = this.state;
     return (
       <div className="wrapper">
         <Navbar />
@@ -20,7 +57,20 @@ class Welcome extends Component {
           Quia quibusdam voluptate nisi dolor ullam laborum odio! Voluptate.
         </p>
 
-        <button>About us</button>
+        <div className="clock-div">
+          <h1>{date?.toLocaleTimeString()}</h1>
+        </div>
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            this.setState({ show: !this.state.show });
+          }}
+        >
+          About us
+        </button>
+        {this.state.show ? <About /> : ""}
+
+        {/* <LifeCycle /> */}
       </div>
     );
   }
