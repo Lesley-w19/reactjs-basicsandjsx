@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import About from "./About.jsx";
 import Navbar from "./Navbar.jsx";
 import LifeCycle from "./LifeCycle.jsx";
+
+
 class Welcome extends Component {
   constructor(props) {
     super(props);
@@ -48,14 +50,14 @@ class Welcome extends Component {
           veniam adipisci perferendis dolore repudiandae pariatur quisquam quas
           quidem temporibus!
         </p>
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ipsum
           dolore perspiciatis corrupti mollitia quisquam similique, eos nostrum
           exercitationem quibusdam est voluptates dolorum tenetur, facilis
           tempore laborum voluptatem sed cumque! Modi aspernatur aut
           reprehenderit, repellendus deleniti suscipit culpa ipsam ullam harum.
           Quia quibusdam voluptate nisi dolor ullam laborum odio! Voluptate.
-        </p>
+        </p> */}
 
         <div className="clock-div">
           <h1>{date?.toLocaleTimeString()}</h1>
@@ -63,6 +65,7 @@ class Welcome extends Component {
         <button
           className="btn btn-primary"
           onClick={() => {
+            console.log(this.state.show)
             this.setState({ show: !this.state.show });
           }}
         >
