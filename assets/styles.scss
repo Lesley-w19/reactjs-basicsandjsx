@@ -28,7 +28,7 @@
       ),
       url("https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
         no-repeat center cover;
-        background-color: rgb(96, 1, 68);
+    background-color: rgba(96, 1, 67, 0.137);
     h1 {
       text-align: center;
       color: orangered;
@@ -39,10 +39,14 @@
     p {
       width: 60%;
       letter-spacing: 1px;
-      color: #fff;
+      //   color: #fff;
       margin: 20px auto;
       text-align: center;
       font-size: 22px;
     }
   }
+}
+
+button{
+    
 }

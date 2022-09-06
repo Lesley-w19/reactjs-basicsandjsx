@@ -43,7 +43,7 @@
   border-radius: 60px;
   background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.618)), color-stop(rgba(0, 0, 0, 0.229)), to(rgba(0, 0, 0, 0.632))), url("https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center cover;
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.618), rgba(0, 0, 0, 0.229), rgba(0, 0, 0, 0.632)), url("https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center cover;
-  background-color: #600144;
+  background-color: rgba(96, 1, 67, 0.137);
 }
 
 .container .content h1 {
@@ -57,7 +57,6 @@
 .container .content p {
   width: 60%;
   letter-spacing: 1px;
-  color: #fff;
   margin: 20px auto;
   text-align: center;
   font-size: 22px;
